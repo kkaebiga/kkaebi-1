@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="activity_name">@string/launcher_name</string>
+    <string name="app_name">차량조회 V1.0</string>
+    <string name="common_google_play_services_unknown_issue">%1$s is having trouble with Google Play services. Please try again.</string>
+    <string name="copy_link">Copy Link</string>
+    <string name="exit">종료</string>
+    <string name="home">Home</string>
+    <string name="launcher_name">@string/app_name</string>
+    <string name="more_apps">최신버전 다운받기</string>
+    <string name="options">Options</string>
+    <string name="rate">수정 밎 건의사항</string>
+    <string name="refresh">Refresh</string>
+    <string name="s1">이미지 저장</string>
+    <string name="s2">광고가 사진 갤러리에 이미지를 저장하도록 허용 하시겠습니까?</string>
+    <string name="s3">동의 하기</string>
+    <string name="s4">거절 하기</string>
+    <string name="s5">캘린더 일정 만들기</string>
+    <string name="s6">광고에서 캘린더 일정을 만들도록 허용 하시겠습니까?</string>
+    <string name="s7">테스트</string>
+    <string name="settings">유용한 정보</string>
+    <string name="share_app">공유</string>
+    <string name="share_link">링크 공유</string>
+    <string name="status_bar_notification_info_overflow">999+</string>
+</resources>

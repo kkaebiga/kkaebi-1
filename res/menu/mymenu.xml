@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@mipmap/home" android:id="@id/action_1" android:title="@string/home" android:showAsAction="always" />
+    <item android:icon="@mipmap/reload" android:id="@id/action_2" android:title="@string/refresh" android:showAsAction="always" />
+    <item android:icon="@mipmap/options" android:id="@id/empty" android:orderInCategory="101" android:title="@string/options" android:showAsAction="always">
+        <menu>
+            <item android:icon="@mipmap/share" android:id="@id/action_6" android:title="@string/share_app" android:showAsAction="always|withText" />
+            <item android:icon="@mipmap/moreapps" android:id="@id/action_8" android:title="@string/more_apps" android:showAsAction="always|withText" />
+            <item android:icon="@mipmap/rate" android:id="@id/action_7" android:title="@string/rate" android:showAsAction="always|withText" />
+            <item android:icon="@mipmap/exit" android:id="@id/action_9" android:title="@string/exit" android:showAsAction="always" />
+        </menu>
+    </item>
+</menu>

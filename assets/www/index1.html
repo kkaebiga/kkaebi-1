@@ -1,0 +1,73 @@
+
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>공지팝업</title>
+  <script type="text/javascript" src="http://ueec.or.kr/ueec/js/jquery-2.2.4.min.js"></script>
+
+ </head>
+ <body>
+  <div class="popwrap">
+	
+			
+			<div>
+				<img src="http://ueec.or.kr/ueec/notice.jpg"  style="width:471px;" rel="mimg1" />
+			</div>
+		</div>
+			<form name="pop_form">
+			<div id="pop1" class="ui-draggable">
+			
+					<div id="check1" style="float: left;">
+						<label for="main_popup_close_today">
+						<input type="checkbox" id="main_popup_close_today" name="main_popup_close_today" value="1">하루동안 보지 않기</label>
+					</div>
+					<div class="close">
+					<div id="close1" style="float: right;">
+						<a href="#none" id="main_popup_close">닫기</a>
+					</div>
+				</form>
+			</div>
+		<script type="text/javascript">
+		$(document).ready(function() {
+				
+			function getCookie( name ){
+				var nameOfCookie = name + "=";
+				var x = 0;
+				
+				while ( x <= document.cookie.length ){
+						var y = (x+nameOfCookie.length);
+						if ( document.cookie.substring( x, y ) == nameOfCookie ) {
+							if ( (endOfCookie=document.cookie.indexOf( ";", y )) == -1 )
+								endOfCookie = document.cookie.length;
+							return unescape( document.cookie.substring( y, endOfCookie ) );
+						}
+						x = document.cookie.indexOf( " ", x ) + 1;
+						if ( x == 0 ) break;
+				}
+				return "";
+			}
+			
+			var todayDate = new Date();
+			var cookie = getCookie('ueec_main_popup1');
+			if(cookie == '1') $('#pop').hide(); 
+			
+			$('#main_popup_close').click(function(){
+				var index = $(this).prop('id').replace(/[^0-9]/gi, '');
+				
+				if($('#main_popup_close_today').is(':checked')){
+					todayDate.setDate(todayDate.getDate() + 1);
+					document.cookie = "ueec_main_popup="+escape("1")+";path=/;expires="+todayDate.toGMTString()+";";
+				}else{
+					todayDate.setDate(todayDate.getDate() + -1);
+					document.cookie = "ueec_main_popup=;path=/;expires="+todayDate.toGMTString()+";";
+				}
+				window.close();
+			});
+		
+			$('div[id^=pop]').draggable();
+		});
+		</script>
+	</div>
+ </body>
+</html>
